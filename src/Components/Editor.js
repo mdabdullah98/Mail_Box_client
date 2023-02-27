@@ -10,9 +10,8 @@ import {
   mailToFunc,
   subjectFunc,
   composeMailFunc,
-  boldFunc,
-  italicFunc,
-  clearEverything,
+  // boldFunc,
+  // italicFunc,
 } from "./ReduxToolkit/Slices/MailFormSlice";
 
 // redux action from AuthSlice
@@ -64,8 +63,7 @@ const Wrapper = styled.section`
         align-items: center;
         justify-content: space-between;
         .bold-span,
-        .italic-span,
-        .clear-everything {
+        .italic-span {
           font-size: 1.3rem;
           padding: 0.2rem 0.8rem;
           border: 0.5px solid lightgray;
@@ -199,7 +197,6 @@ const Editor = () => {
           })
         );
       }, 1500);
-      dispatch(clearEverything());
       navigate("/mail");
     } catch (err) {
       console.log("i am in cath", err);
@@ -266,7 +263,7 @@ const Editor = () => {
                 className={`editor-items ${boldFont} ${italicFont + "only"}`}
               >
                 <Button type="submit">Send</Button>
-                <span
+                {/* <span
                   onClick={() => dispatch(boldFunc("bold"))}
                   title="bold"
                   className="bold-span"
@@ -278,15 +275,9 @@ const Editor = () => {
                   title="italic"
                   className="italic-span"
                 >
-                  <em>I</em>
-                </span>
-                <span
-                  className="clear-everything"
-                  title="clear"
-                  onClick={() => dispatch(clearEverything())}
-                >
-                  clear
-                </span>
+                  <em>I</em> */}
+                {/* </span> */}
+
                 <Button className="ms-3" onClick={() => navigate("/mail")}>
                   Cancel
                 </Button>
