@@ -150,7 +150,6 @@ const Login = () => {
               Login
             </button>
           </form>
-          <h1>chupapi minaunu</h1>
           <div className="have-an-account mt-3 px-1">
             <span> Dont't Have an Account ?</span>{" "}
             <Button>
